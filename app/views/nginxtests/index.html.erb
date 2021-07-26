@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Nginxtests</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @nginxtests.each do |nginxtest| %>
+      <tr>
+        <td><%= nginxtest.title %></td>
+        <td><%= nginxtest.content %></td>
+        <td><%= link_to 'Show', nginxtest %></td>
+        <td><%= link_to 'Edit', edit_nginxtest_path(nginxtest) %></td>
+        <td><%= link_to 'Destroy', nginxtest, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Nginxtest', new_nginxtest_path %>

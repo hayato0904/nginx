@@ -1,0 +1,2 @@
+class Nginxtest < ApplicationRecord
+end
